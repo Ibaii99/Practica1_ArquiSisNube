@@ -8,11 +8,14 @@
 
 # Ejecutar esta Vagrant Box
 
-1. Descargar este repositorio
-2. Instanciar un una consola de comandos en la raiz del directorio.
-3. Ejecutar `vagrant up`
-4. Esperar a que termine e ir a localhost:8080 o 192.168.0.160
-
+- Opción 1: Crear la máquina desde cero con el Vagrantfile y el fichero de aprovisionamiento
+    1. Descargar este repositorio
+    2. Instanciar un una consola de comandos en la raiz del directorio.
+    3. Ejecutar `vagrant up`
+    4. Esperar a que termine e ir a localhost:8080 o 192.168.0.160
+- Opción 2: Importar la máquina a VirtualBox
+    1. Extraer el fichero "Virtual Box Wordpress Machine"
+    2. Importar el archivo `.vbox` en VirtualBox
 ---
 
 
