@@ -5,6 +5,7 @@
 > Ingeniería Informática + TDE
 
 ---
+En caso de querer consultar esta documentación en su formato original:[Documentación técnica de una aplicación web virtualizada](https://www.notion.so/Documentaci-n-t-cnica-de-una-aplicaci-n-web-virtualizada-29b035377ffc4d6d8963d0c616f0e7bb)
 
 # Objetivos de la práctica
 
