@@ -14,7 +14,7 @@
     3. Ejecutar `vagrant up`
     4. Esperar a que termine e ir a localhost:8080 o 192.168.0.160
 - Opción 2: Importar la máquina a VirtualBox
-    1. Extraer el fichero "Virtual Box Wordpress Machine"
+    1. Extraer el fichero [Virtual Box Wordpress Machine](https://drive.google.com/file/d/1hz2C83K1IKUwy2JJTZ4JQUDIBh3cpU-l/view?usp=sharing)
     2. Importar el archivo `.vbox` en VirtualBox
 ---
 
