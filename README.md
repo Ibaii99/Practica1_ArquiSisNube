@@ -189,7 +189,7 @@ El aprovisionamiento se realizará a través de un script como se ha mencionado 
 5. Instalar PHP y sus plugins
 
     ```bash
-    apt-get install -y php libapache2-mod-php php-mysql php-gd php-cli
+    apt-get install -y php php-mysql
     ```
 
     ---
