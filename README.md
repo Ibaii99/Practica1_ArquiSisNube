@@ -146,15 +146,19 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
 ## Aprovisionamiento de la VagrantBox
 
+Este paso solo es necesario si se quiere aprovisionar a la máquina con más elementos de los que trae de por sí.
+
+El aprovisionamiento se realizará a través de un script como se ha mencionado en la configuración del `Vagrantfile`. Este script ha de ser capaz de instalar todos los requisitos de la máquina virtual (PHP, MySQL, Apache y Wordpress). 
+
 1. Añadir el encabezado del script para que este sea interpretado como un bash script.
 
     ```bash
     #!/usr/bin/env bash
     ```
 
----
+    ---
 
-1. Actualizar la lista de paquetes disponibles y sus versiones.
+2. Actualizar la lista de paquetes disponibles y sus versiones.
 
     ```bash
     apt-get -y update
@@ -164,7 +168,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-2. Actualizar los paquetes instalados a la versión estable más reciente por motivos de seguridad.
+3. Actualizar los paquetes instalados a la versión estable más reciente por motivos de seguridad.
 
     ```bash
     apt-get -y upgrade
@@ -172,7 +176,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-3. Instalar apache
+4. Instalar apache
 
     ```bash
     apt-get install -y apache2
@@ -180,7 +184,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-4. Instalar PHP y sus plugins
+5. Instalar PHP y sus plugins
 
     ```bash
     apt-get install -y php libapache2-mod-php php-mysql php-gd php-cli
@@ -188,7 +192,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-5. Reiniciar Apache
+6. Reiniciar Apache
 
     ```bash
     systemctl restart apache2
@@ -196,7 +200,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-6. Eliminar el index.html generado por Apache, instalar wordpress y eliminar los archivos residuales.
+7. Eliminar el index.html generado por Apache, instalar wordpress y eliminar los archivos residuales.
 
     ```bash
     #Remove Apache Index
@@ -212,7 +216,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-7. Instalar MySQL con usuario y contraseña **root**.
+8. Instalar MySQL con usuario y contraseña **root**.
 
     ```bash
     debconf-set-selections <<< 'mysql-server mysql-server/root_password password **root**'	
@@ -223,7 +227,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-8. Crear las Bases de datos y usuarios para wordpress.
+9. Crear las Bases de datos y usuarios para wordpress.
 
     ```bash
     mysql -u root --password=root -e "CREATE DATABASE wordpress;"
@@ -234,7 +238,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
     ---
 
-9. Cargar el archivo de configuración de Wordpress desde la carpeta compartida 
+10. Cargar el archivo de configuración de Wordpress desde la carpeta compartida 
 
     Si es la primera vez que se instala Wordpress y no cuentas con un fichero `wp-config.php` este paso no podrás realizarlo aún y deberás configurar wordpress a través del portar web.
 
@@ -291,9 +295,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
         ---
 
-    ---
-
-10. Reiniciar la máquina
+11. Reiniciar la máquina
 
     ```bash
     reboot
@@ -436,6 +438,14 @@ Como extras añadidos a la práctica, hemos de destacar un par de aspectos.
 
     ---
 
-- Por último, como se ha podido ver a lo largo de esta documentación se le ha aplicado un tiempo mayor que el necesario, nos hemos tomado la molestia de hacer una documentación muy detallada y muy dinámica. Por eso hemos realizado la documentación en [Notion](http://www.notion.so), una herramienta que nos permite crear la documentación en su portal web y exportarlo a markdown, formato estandardizado en las wikis de github. Además, permite generar un link de acceso a lectura público o exportar la documentación a html en caso de querer publicarla online.
+- Por último, como se ha podido ver a lo largo de esta documentación se le ha aplicado un tiempo mayor que el necesario, nos hemos tomado la molestia de hacer una documentación muy detallada, muy dinámica y sobre todo, muy profesional.
+
+    Por eso hemos realizado la documentación en [Notion](http://www.notion.so), una herramienta que nos permite crear la documentación en su portal web y exportarlo a markdown, formato estandardizado en las wikis de github. Además, permite generar un link de acceso a lectura público o exportar la documentación a html en caso de querer publicarla online.
 
     [Notion - The all-in-one workspace for your notes, tasks, wikis, and databases.](http://www.notion.so)
+
+  
+
+En caso de querer consultar esta documentación en su formato original:
+
+[Documentación técnica de una aplicación web virtualizada](https://www.notion.so/Documentaci-n-t-cnica-de-una-aplicaci-n-web-virtualizada-29b035377ffc4d6d8963d0c616f0e7bb)
