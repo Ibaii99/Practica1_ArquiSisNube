@@ -197,7 +197,7 @@ El aprovisionamiento se realizará a través de un script como se ha mencionado 
 6. Reiniciar Apache
 
     ```bash
-    systemctl restart apache2
+    sevice apache2 restart
     ```
 
     ---
@@ -210,7 +210,7 @@ El aprovisionamiento se realizará a través de un script como se ha mencionado 
     rm index.html
     #Download Wordpress and extract it
     wget http://wordpress.org/latest.tar.gz -nc -nv
-    tar -xzf latest.tar.gz
+    tar xzfv latest.tar.gz
     rsync -a  wordpress/* .
     rm latest.tar.gz
     rm -rf wordpress/
