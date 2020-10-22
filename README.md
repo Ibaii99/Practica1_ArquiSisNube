@@ -6,7 +6,17 @@
 
 ---
 
-Formato original: [Documentación técnica de una aplicación web virtualizada](https://www.notion.so/Documentaci-n-t-cnica-de-una-aplicaci-n-web-virtualizada-29b035377ffc4d6d8963d0c616f0e7bb)
+# Ejecutar esta Vagrant Box
+
+1. Descargar este repositorio
+2. Instanciar un una consola de comandos en la raiz del directorio.
+3. Ejecutar `vagrant up`
+4. Esperar a que termine e ir a localhost:8080 o 192.168.0.160
+
+---
+
+
+Formato original de la siguiente documentación: [Documentación técnica de una aplicación web virtualizada](https://www.notion.so/Documentaci-n-t-cnica-de-una-aplicaci-n-web-virtualizada-29b035377ffc4d6d8963d0c616f0e7bb)
 
 # Objetivos de la práctica
 
