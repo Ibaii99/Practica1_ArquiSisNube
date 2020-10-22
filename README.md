@@ -378,7 +378,7 @@ Para ejecutar el script de ApacheBench, se ha de crear un fichero llamado [`test
 		for C in 1 5 10 50 100 500 1000
 		do
 			echo "Testing -n $N -c $C..."
-			ab -n $N -c $C http://192.168.1.58/ &> test-$N-$C.log
+			ab -n $N -c $C http://192.168.0.126/ &> test-$N-$C.log
 		done
 	done
 ```
