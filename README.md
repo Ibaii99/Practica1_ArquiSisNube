@@ -125,7 +125,7 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
     config.vm.synced_folder "config", "/vagrant_data"
     ```
 
-- Para configurar los recursos asignados a la máquina y aprovisionarla de la memoria necesaria para su correcto funcionamiento se debe modificar los siguientes atributos de la siguiente forma.
+- Para configurar los recursos asignados a la máquina y aprovisionarla de la memoria necesaria para su correcto funcionamiento se debe modificar los siguientes atributos de la siguiente forma.Es posible mostrar en pantalla la máquina virtual si se desea.
 
     ```ruby
     config.vm.provider "virtualbox" do |vb|
