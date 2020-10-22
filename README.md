@@ -159,13 +159,12 @@ Dentro del `Vagrantfile` hay muchas propiedades, pero en este caso no son todas 
 
 ---
 ## Conexíon SSH
-Para conexión SSH con la máquina habrá que abrir una consola de comandos en el directorio mientras la máquina este encendida y ejecutar:
 
-    ```bash
-    vagrant ssh
-    ```
+Para conexión SSH con la máquina habrá que abrir una consola de comandos en el directorio mientras la máquina este encendida y ejecutar
 
-    ---
+```bash
+vagrant ssh
+```
 
 ## Aprovisionamiento de la VagrantBox
 
